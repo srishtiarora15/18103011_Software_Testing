@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+actor Teacher as T
+actor Student as S
+actor Administrator as A
+
+skinparam usecase {
+BackgroundColor LightBlue
+BorderColor DarkSlateGray
+}
+
+Rectangle College {
+    usecase "Assign course to teacher" as UC1
+    usecase "View teacher" as UC2
+    usecase "View course calender" as UC3
+    usecase "Manage course" as UC4
+    usecase "View course" as UC5
+    usecase "View student" as UC6
+    usecase "Manage topics for course" as UC7
+    usecase "Manage teacher information" as UC8
+    usecase "Manage student-teacher" as UC9
+   
+}
+T -- UC1
+T -- UC3
+S -- UC3
+S -- UC5
+UC1 --- A
+UC2 --- A
+UC3 --- A
+UC4 --- A
+UC5 --- A
+UC6 --- A
+UC7 --- A
+UC8 --- A
+UC9 --- A
+
+@enduml

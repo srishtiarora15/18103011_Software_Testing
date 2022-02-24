@@ -1,0 +1,66 @@
+@startuml
+skinparam sequenceMessageAlign right
+skinparam ParticipantPadding 50
+
+actor Admin
+activate Admin #RoyalBlue
+activate "Login Success" #RoyalBlue
+Admin -> "Login Success" : Login to Page
+deactivate "Login Success"
+
+"College Management" -> "College Management" : Add/Edit\nCollege
+|||
+"College Management" -> "College Management" : Save/Update\nCollege
+|||
+"College Management" -> "College Management" : List/Delete\nCollege
+|||
+activate "College Management" #RoyalBlue
+"Login Success" -> "College Management" : Manage College
+deactivate "College Management"
+
+
+"Student Management" -> "Student Management" : Add/Edit\nStudent
+|||
+"Student Management" -> "Student Management" : Save/Update\nStudent
+|||
+"Student Management" -> "Student Management" : List/Delete\nStudent
+|||
+activate "Student Management" #RoyalBlue
+"Login Success" -> "Student Management" : Manage Student Details
+deactivate "Student Management"
+
+
+"Course Management" -> "Course Management" : Add/Edit\nCourse
+|||
+"Course Management" -> "Course Management" : Save/Update\nCourse
+|||
+"Course Management" -> "Course Management" : List/Delete\nCourse
+|||
+activate "Course Management" #RoyalBlue
+"Login Success" -> "Course Management" : Manage Course Details
+deactivate "Course Management"
+
+
+"Registration Management" -> "Registration Management" : Add/Edit\nRegistration
+|||
+"Registration Management" -> "Registration Management" : Save/Update\nRegistration
+|||
+"Registration Management" -> "Registration Management" : List/Delete\nRegistration
+|||
+activate "Registration Management" #RoyalBlue
+"Login Success" -> "Registration Management" : Manage Registration Details
+deactivate "Registration Management"
+
+"Faculty Management" -> "Faculty Management" : Add/Edit\nFaculty
+|||
+"Faculty Management" -> "Faculty Management" : Save/Update\nFaculty
+|||
+"Faculty Management" -> "Faculty Management" : List/Deletet\nFaculty
+|||
+activate "Faculty Management" #RoyalBlue
+"Login Success" -> "Faculty Management" : Manage Faculty Details
+deactivate "Faculty Management"
+
+
+deactivate Admin
+@enduml
